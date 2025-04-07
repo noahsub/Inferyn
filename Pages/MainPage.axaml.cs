@@ -219,7 +219,6 @@ public partial class MainPage : UserControl, IPage
         
         Message replyMessage = new Message();
         replyMessage.NameLabel.Content = GetModel();
-        replyMessage.MessageTextBox.Text = "...";
         MessagesStackPanel.Children.Add(replyMessage);
         
         // Create the request body
@@ -251,6 +250,10 @@ public partial class MainPage : UserControl, IPage
 
                 Dispatcher.UIThread.InvokeAsync(() =>
                 {
+                    if (replyMessage.MessageTextBox.Text == "...")
+                    {
+                        replyMessage.MessageTextBox.Text = "";
+                    }
                     replyMessage.MessageTextBox.Text += content;
                 });
                 await Task.Delay(10); // Try 5–20ms
