@@ -229,7 +229,11 @@ public partial class MainPage : UserControl, IPage
             messages = History
         };
 
-        var httpClient = new HttpClient();
+        var httpClient = new HttpClient
+        {
+            Timeout = TimeSpan.FromMinutes(10)
+        };
+        
         var httpRequest = new HttpRequestMessage(HttpMethod.Post, $"http://{GetAddress()}:{GetPort()}/api/chat")
         {
             Content = new StringContent(JsonSerializer.Serialize(body), Encoding.UTF8, "application/json")
