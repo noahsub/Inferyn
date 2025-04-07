@@ -259,6 +259,7 @@ public partial class MainPage : UserControl, IPage
                         replyMessage.MessageTextBox.Text = "";
                     }
                     replyMessage.MessageTextBox.Text += content;
+                    MessageScrollViewer.ScrollToEnd();
                 });
                 await Task.Delay(10); // Try 5–20ms
                 
