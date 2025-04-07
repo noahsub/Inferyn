@@ -1,0 +1,75 @@
+﻿<Window
+    Background="Transparent"
+    Closed="TopLevel_OnClosed"
+    ExtendClientAreaToDecorationsHint="True"
+    Height="400"
+    Icon="avares://Inferyn/Assets/Icons/Inferyn.ico"
+    SystemDecorations="None"
+    Title="Inferyn"
+    Topmost="True"
+    TransparencyLevelHint="AcrylicBlur"
+    Width="950"
+    WindowStartupLocation="CenterOwner"
+    d:DesignHeight="400"
+    d:DesignWidth="950"
+    mc:Ignorable="d"
+    x:Class="Inferyn.Windows.SplashScreen"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Panel>
+        <ExperimentalAcrylicBorder ClipToBounds="True" IsHitTestVisible="False">
+            <ExperimentalAcrylicBorder.Material>
+                <StaticResource ResourceKey="AcrylicMaterial" />
+            </ExperimentalAcrylicBorder.Material>
+            <Grid ColumnDefinitions="*">
+                <Rectangle Fill="{StaticResource PrimaryBackground}" Grid.Column="0" />
+
+                <Image
+                    HorizontalAlignment="Left"
+                    Opacity="0.75"
+                    Stretch="Fill"
+                    x:Name="LoadingImage" />
+
+                <Rectangle Grid.Column="0" Opacity="1">
+                    <Rectangle.Fill>
+                        <LinearGradientBrush EndPoint="950,0" StartPoint="350,0">
+                            <GradientStop Color="{StaticResource PrimaryAccent}" Offset="0" />
+                            <GradientStop Color="Transparent" Offset="1" />
+                        </LinearGradientBrush>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <Grid Grid.Column="0" RowDefinitions="4*,1*">
+                    <StackPanel
+                        Grid.Row="0"
+                        HorizontalAlignment="Left"
+                        Margin="40"
+                        VerticalAlignment="Center">
+                        <Label
+                            Content="Inferyn"
+                            FontSize="25"
+                            FontWeight="Bold" />
+                        <Label Content="V1.0.0" x:Name="VersionLabel" />
+                    </StackPanel>
+
+                    <StackPanel
+                        Grid.Row="1"
+                        HorizontalAlignment="Left"
+                        Margin="40,0,0,40"
+                        VerticalAlignment="Center">
+                        <Label Content="LOADING" x:Name="LoadingLabel" />
+                        <TextBlock
+                            FontSize="10"
+                            FontWeight="Thin"
+                            Margin="3">
+                            <Run Text="COPYRIGHT (C) 2024 NOAHSUB AND CONTRIBUTORS. ALL RIGHTS RESERVED." />
+                            <LineBreak />
+                            <Run Text="LICENSED UNDER THE GNU GENERAL PUBLIC LICENSE V3.0." />
+                        </TextBlock>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </ExperimentalAcrylicBorder>
+    </Panel>
+</Window>

@@ -1,0 +1,21 @@
+﻿<UserControl
+    d:DesignHeight="100"
+    d:DesignWidth="1000"
+    mc:Ignorable="d"
+    x:Class="Inferyn.Controls.ChatInputBox"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid KeyDown="InputElement_OnKeyDown">
+        <TextBox
+            AcceptsReturn="True"
+            BorderBrush="Transparent"
+            BorderThickness="0"
+            HorizontalAlignment="Stretch"
+            Padding="20"
+            TextWrapping="Wrap"
+            VerticalAlignment="Stretch"
+            x:Name="InputTextBox" />
+    </Grid>
+</UserControl>
