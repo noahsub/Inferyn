@@ -156,14 +156,17 @@
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </AvaloniaResource>
       <None Remove="Assets\Icons\Inferyn.ico" />
-      <AvaloniaResource Include="Assets\Icons\Inferyn.ico">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
       <None Include="Assets\Icons\inferyn.png" />
     </ItemGroup>
 
     <ItemGroup>
       <None Remove="VERSION" />
+      <AvaloniaResource Include="Assets\Icons\Inferyn.ico">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <Content Include="Assets\Icons\Inferyn.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
       <Content Include="VERSION">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>

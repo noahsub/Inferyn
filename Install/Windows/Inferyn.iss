@@ -36,7 +36,7 @@ LicenseFile=..\..\publish\LICENSE
 ; Uncomment the following line to run in non administrative install mode (install for current user only.)
 ;PrivilegesRequired=lowest
 OutputBaseFilename=inferyn-installer_1.0.0
-SetupIconFile=..\..\Assets\Icons\inferyn.ico
+SetupIconFile=..\..\Assets\Icons\Inferyn.ico
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
