@@ -1,0 +1,30 @@
+<Window
+    Background="Transparent"
+    Closed="TopLevel_OnClosed"
+    ExtendClientAreaToDecorationsHint="True"
+    Icon="avares://Inferyn/Assets/Icons/Inferyn.ico"
+    MinHeight="720"
+    MinWidth="1280"
+    Title="Inferyn"
+    TransparencyLevelHint="AcrylicBlur"
+    WindowStartupLocation="CenterOwner"
+    WindowState="Normal"
+    d:DesignHeight="1080"
+    d:DesignWidth="1920"
+    x:Class="Inferyn.Windows.MainWindow"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Panel>
+        <ExperimentalAcrylicBorder
+            CornerRadius="{StaticResource Radius}"
+            IsHitTestVisible="True"
+            PointerPressed="InputElement_OnPointerPressed">
+            <ExperimentalAcrylicBorder.Material>
+                <StaticResource ResourceKey="AcrylicMaterial" />
+            </ExperimentalAcrylicBorder.Material>
+            <ContentControl IsHitTestVisible="True" x:Name="PageContent" />
+        </ExperimentalAcrylicBorder>
+    </Panel>
+</Window>

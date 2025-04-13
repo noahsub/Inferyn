@@ -1,0 +1,28 @@
+﻿<UserControl
+    d:DesignHeight="100"
+    d:DesignWidth="800"
+    mc:Ignorable="d"
+    x:Class="Inferyn.Controls.Message"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Label
+            Content="Name"
+            Grid.Column="0"
+            Margin="0,4,0,0"
+            x:Name="NameLabel" />
+        <TextBox
+            Background="Transparent"
+            Grid.Column="1"
+            IsReadOnly="True"
+            Text="..."
+            TextWrapping="Wrap"
+            x:Name="MessageTextBox" />
+    </Grid>
+</UserControl>
