@@ -4,9 +4,15 @@
     mc:Ignorable="d"
     x:Class="Inferyn.Controls.Message"
     xmlns="https://github.com/avaloniaui"
+    xmlns:avedit="https://github.com/avaloniaui/avaloniaedit"
+    xmlns:ctxt="clr-namespace:ColorTextBlock.Avalonia;assembly=ColorTextBlock.Avalonia"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mdxaml="https://github.com/whistyun/Markdown.Avalonia"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="100" />
@@ -17,12 +23,87 @@
             Grid.Column="0"
             Margin="0,4,0,0"
             x:Name="NameLabel" />
-        <TextBox
-            Background="Transparent"
+        <!--  <TextBox  -->
+        <!--  Background="Transparent"  -->
+        <!--  Grid.Column="1"  -->
+        <!--  IsReadOnly="True"  -->
+        <!--  Text="..."  -->
+        <!--  TextWrapping="Wrap"  -->
+        <!--  x:Name="MessageTextBox" />  -->
+        <mdxaml:MarkdownScrollViewer
             Grid.Column="1"
-            IsReadOnly="True"
-            Text="..."
-            TextWrapping="Wrap"
-            x:Name="MessageTextBox" />
+            Margin="0,4,0,0"
+            x:Name="MessageTextBox">
+            <mdxaml:MarkdownScrollViewer.Styles>
+                <!--  Global Text  -->
+                <Style Selector="ctxt|CTextBlock">
+                    <Setter Property="FontFamily" Value="{StaticResource JetBrainsMono}" />
+                </Style>
+                <!--  Table  -->
+                <Style Selector="Border.Table">
+                    <Setter Property="BorderBrush" Value="Transparent" />
+                    <Setter Property="BorderThickness" Value="0" />
+                    <Setter Property="Background" Value="Transparent" />
+                    <Setter Property="Margin" Value="0 10 0 20" />
+                </Style>
+
+                <Style Selector="Grid.Table">
+                    <Setter Property="Background" Value="Transparent" />
+                </Style>
+
+                <Style Selector="Border.TableHeader">
+                    <Setter Property="Margin" Value="0" />
+                    <Setter Property="BorderBrush" Value="Gray" />
+                    <Setter Property="BorderThickness" Value="0,0,0,1" />
+                    <Setter Property="Background" Value="Transparent" />
+                </Style>
+
+                <Style Selector="Border.OddTableRow">
+                    <Setter Property="Margin" Value="0" />
+                    <Setter Property="BorderBrush" Value="Gray" />
+                    <Setter Property="BorderThickness" Value="0,0,0,1" />
+                    <Setter Property="Background" Value="Transparent" />
+                </Style>
+
+                <Style Selector="Border.EvenTableRow">
+                    <Setter Property="Margin" Value="0" />
+                    <Setter Property="BorderBrush" Value="Gray" />
+                    <Setter Property="BorderThickness" Value="0,0,0,1" />
+                    <Setter Property="Background" Value="Transparent" />
+                </Style>
+
+                <Style Selector="Border.TableHeader ctxt|CTextBlock">
+                    <Setter Property="FontWeight" Value="Bold" />
+                    <Setter Property="Background" Value="Transparent" />
+                </Style>
+
+                <!--  Code Block  -->
+                <Style Selector="ctxt|CCode">
+                    <Setter Property="BorderBrush" Value="Transparent" />
+                    <Setter Property="BorderThickness" Value="0" />
+                    <Setter Property="Padding" Value="5" />
+                    <Setter Property="MonospaceFontFamily" Value="{StaticResource JetBrainsMono}" />
+                    <Setter Property="Foreground" Value="DarkGreen" />
+                    <Setter Property="Background" Value="Transparent" />
+                </Style>
+
+                <Style Selector="Border.CodeBlock">
+                    <Setter Property="BorderBrush" Value="Transparent" />
+                    <Setter Property="BorderThickness" Value="0" />
+                    <Setter Property="Margin" Value="0 10 0 20" />
+                    <Setter Property="Background" Value="Transparent" />
+                </Style>
+
+                <Style Selector="TextBlock.CodeBlock">
+                    <Setter Property="Foreground" Value="DarkGreen" />
+                    <Setter Property="FontFamily" Value="{StaticResource JetBrainsMono}" />
+                </Style>
+
+                <Style Selector="avedit|TextEditor">
+                    <Setter Property="FontFamily" Value="{StaticResource JetBrainsMono}" />
+                    <Setter Property="Background" Value="{StaticResource SecondaryBackground}" />
+                </Style>
+            </mdxaml:MarkdownScrollViewer.Styles>
+        </mdxaml:MarkdownScrollViewer>
     </Grid>
 </UserControl>

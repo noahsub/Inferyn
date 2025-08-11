@@ -122,7 +122,7 @@ public partial class MainPage : UserControl, IPage
             History.Add(message);
             var messageControl = new Message();
             messageControl.NameLabel.Content = message.Role;
-            messageControl.MessageTextBox.Text = message.Content;
+            messageControl.MessageTextBox.Markdown = message.Content;
             MessagesStackPanel.Children.Add(messageControl);
         }
     }
@@ -225,7 +225,7 @@ public partial class MainPage : UserControl, IPage
 
         Message userMessage = new Message();
         userMessage.NameLabel.Content = "User";
-        userMessage.MessageTextBox.Text = prompt;
+        userMessage.MessageTextBox.Markdown = prompt;
         MessagesStackPanel.Children.Add(userMessage);
         
         Message replyMessage = new Message();
@@ -265,11 +265,11 @@ public partial class MainPage : UserControl, IPage
 
                 Dispatcher.UIThread.InvokeAsync(() =>
                 {
-                    if (replyMessage.MessageTextBox.Text == "...")
+                    if (replyMessage.MessageTextBox.Markdown == "...")
                     {
-                        replyMessage.MessageTextBox.Text = "";
+                        replyMessage.MessageTextBox.Markdown = "";
                     }
-                    replyMessage.MessageTextBox.Text += content;
+                    replyMessage.MessageTextBox.Markdown += content;
                     MessageScrollViewer.ScrollToEnd();
                 });
                 await Task.Delay(10); // Try 5–20ms

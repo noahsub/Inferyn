@@ -28,7 +28,7 @@
             <Button
                 Background="{StaticResource PrimaryAccent}"
                 Click="CreateChatButton_OnClick"
-                Content="Create"
+                Content="New Chat"
                 Grid.Row="0"
                 HorizontalAlignment="Stretch"
                 HorizontalContentAlignment="Center"
