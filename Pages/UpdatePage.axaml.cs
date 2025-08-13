@@ -50,6 +50,8 @@ public partial class UpdatePage : UserControl, IPage
     // IPAGE INTERFACE IMPLEMENTATION
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+    public string NavigationName { get; } = "UpdatePage";
+
     /// <summary>
     /// Initializes the update page.
     /// </summary>

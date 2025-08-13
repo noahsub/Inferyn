@@ -6,7 +6,7 @@ using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
 using Avalonia.Threading;
 using Inferyn.Managers;
-using Inferyn.Managers;
+using Inferyn.Pages;
 
 namespace Inferyn;
 
@@ -51,6 +51,8 @@ public partial class App : Application
                 Dispatcher.UIThread.Post(async () =>
                 {
                     // Create application pages
+                    await NavigationManager.CreatePage(new MainPage());
+                    await NavigationManager.CreatePage(new UpdatePage());
 
                     // IMPORTANT: MainWindow must be created after all pages are created, otherwise,
                     // the first page will be initialized twice

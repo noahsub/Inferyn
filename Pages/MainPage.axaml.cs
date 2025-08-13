@@ -46,6 +46,8 @@ public partial class MainPage : UserControl, IPage
         CreateChat();
     }
 
+    public string NavigationName { get; } = "MainPage";
+
     public void Initialize()
     {
         InitializeComponent();
