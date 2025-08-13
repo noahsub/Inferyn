@@ -23,11 +23,11 @@ public partial class SplashScreen : Window
         //     images.Add($"Assets/Images/Backgrounds/inferyn_large_{i}.png");
         // }
         
-        images.Add($"Assets/Images/Backgrounds/inferyn_large_1.png");
+        // images.Add($"Assets/Images/Backgrounds/inferyn_large_1.png");
 
-        var random = new Random();
-        var image = images[random.Next(images.Count)];
-        LoadingImage.Source = new Bitmap(image);
+        // var random = new Random();
+        // var image = images[random.Next(images.Count)];
+        // LoadingImage.Source = new Bitmap(image);
         // Set the version
         VersionLabel.Content = $"v{DataManager.CurrentVersion}";
         // Add the window to the list of open windows
