@@ -8,27 +8,6 @@
     <Application.Styles>
         <FluentTheme />
     </Application.Styles>
-    <Application.Resources>
-        <FontFamily x:Key="JetBrainsMono">avares://Inferyn/Assets/Fonts#JetBrains Mono</FontFamily>
-        <Color x:Key="PrimaryBackground">#121214</Color>
-        <Color x:Key="SecondaryBackground">#17171a</Color>
-        <Color x:Key="ControlsBackground">#1E1E21</Color>
-        <Color x:Key="DisabledBackground">Black</Color>
-        <Color x:Key="PrimaryText">GhostWhite</Color>
-        <Color x:Key="SecondaryText">#9e9e9e</Color>
-        <Color x:Key="InvertedText">#1a1b1e</Color>
-        <Color x:Key="DisabledText">DimGray</Color>
-        <Color x:Key="PrimaryAccent">#c71f37</Color>
-        <Color x:Key="SecondaryAccent">#641220</Color>
-        <CornerRadius x:Key="Radius">10</CornerRadius>
-        <x:Double x:Key="RadiusRectangle">10</x:Double>
-        <ExperimentalAcrylicMaterial
-            BackgroundSource="Digger"
-            MaterialOpacity="0"
-            TintColor="#000000"
-            TintOpacity="0"
-            x:Key="AcrylicMaterial" />
-        <x:Double x:Key="GlobalOpacity">0.85</x:Double>
-    </Application.Resources>
+    <Application.Resources />
     <Application.Styles />
 </Application>
