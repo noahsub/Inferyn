@@ -2,7 +2,6 @@
     Background="Transparent"
     Closed="TopLevel_OnClosed"
     ExtendClientAreaToDecorationsHint="True"
-    Icon="avares://Inferyn/Assets/Icons/Inferyn.ico"
     MinHeight="720"
     MinWidth="1280"
     Title="Inferyn"

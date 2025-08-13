@@ -3,7 +3,6 @@
     Closed="TopLevel_OnClosed"
     ExtendClientAreaToDecorationsHint="True"
     Height="400"
-    Icon="avares://Inferyn/Assets/Icons/Inferyn.ico"
     SystemDecorations="None"
     Title="Inferyn"
     Topmost="True"
