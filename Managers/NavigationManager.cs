@@ -12,7 +12,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Avalonia.Controls;
-using Inferyn.Pages;
+using Inferyn.Interfaces;
 using Inferyn.Windows;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -33,12 +33,7 @@ public static class NavigationManager
     /// <summary>
     /// The pages that can be navigated to.
     /// </summary>
-    private static readonly Dictionary<string, UserControl?> Pages =
-        new()
-        {
-            { "MainPage", null },
-            { "UpdatePage", null },
-        };
+    private static readonly Dictionary<string, UserControl?> Pages = new();
 
     /// <summary>
     /// The current page.
@@ -52,12 +47,7 @@ public static class NavigationManager
     /// <summary>
     /// Contains a dictionary of pages and whether they have been loaded.
     /// </summary>
-    private static readonly Dictionary<string, bool> LoadedPages =
-        new()
-        {
-            { "MainPage", false },
-            { "UpdatePage", false },
-        };
+    private static readonly Dictionary<string, bool> LoadedPages = new();
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // NAVIGATION
@@ -67,52 +57,42 @@ public static class NavigationManager
     /// Switches the page to the specified page.
     /// </summary>
     /// <param name="mainWindow">The main window.</param>
-    /// <param name="page">The page to switch to.</param>
-    public static void SwitchPage(MainWindow mainWindow, string page)
+    /// <param name="pageName">The NavigationName of the page to switch to.</param>
+    public static void SwitchPage(MainWindow mainWindow, string pageName)
     {
         var pageContent = mainWindow.FindControl<ContentControl>("PageContent");
         if (pageContent == null)
             return;
 
-        if (!Pages.ContainsKey(page))
+        if (!Pages.ContainsKey(pageName))
             return;
 
-        if (Pages[page] == null)
+        if (Pages[pageName] == null)
         {
-            Pages[page] = CreatePageInstance(page);
+            // Page must already be created and registered with CreatePage
+            return;
         }
 
-        if (!LoadedPages[page])
+        if (!LoadedPages[pageName])
         {
-            LoadedPages[page] = true;
-            (Pages[page] as dynamic)?.OnFirstLoad();
+            LoadedPages[pageName] = true;
+            (Pages[pageName] as dynamic)?.OnFirstLoad();
         }
 
-        pageContent.Content = Pages[page];
-        _currentPage = Pages[page];
-        (Pages[page] as dynamic)?.OnNavigatedTo();
+        pageContent.Content = Pages[pageName];
+        _currentPage = Pages[pageName];
+        (Pages[pageName] as dynamic)?.OnNavigatedTo();
     }
 
     /// <summary>
-    /// Helper for creating an instance of the specified page.
+    /// Registers a page instance.
     /// </summary>
-    /// <param name="pageName"></param>
-    /// <returns></returns>
-    private static UserControl? CreatePageInstance(string pageName) =>
-        pageName switch
-        {
-            "MainPage" => new MainPage(),
-            "UpdatePage" => new UpdatePage(),
-            _ => null,
-        };
-
-    /// <summary>
-    /// Creates an instance of the specified page.
-    /// </summary>
-    /// <param name="name"></param>
-    public static async Task CreatePage(string name)
+    /// <param name="page">The page instance implementing IPage.</param>
+    public static async Task CreatePage(IPage page)
     {
-        Pages[name] = CreatePageInstance(name);
+        var pageKey = page.NavigationName;
+        Pages[pageKey] = page as UserControl;
+        LoadedPages[pageKey] = false;
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -133,3 +113,4 @@ public static class NavigationManager
     public static Control? GetPage(string name) =>
         Pages.ContainsKey(name) ? Pages[name] : new Control();
 }
+
