@@ -9,14 +9,16 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Avalonia" Version="11.1.0"/>
-        <PackageReference Include="Avalonia.Desktop" Version="11.1.0"/>
-        <PackageReference Include="Avalonia.Themes.Fluent" Version="11.1.0"/>
-        <PackageReference Include="Avalonia.Fonts.Inter" Version="11.1.0"/>
+        <PackageReference Include="Avalonia" Version="11.3.0" />
+        <PackageReference Include="Avalonia.Desktop" Version="11.3.0" />
+        <PackageReference Include="Avalonia.Skia" Version="11.3.0" />
+        <PackageReference Include="Avalonia.Themes.Fluent" Version="11.1.0" />
+        <PackageReference Include="Avalonia.Fonts.Inter" Version="11.1.0" />
         <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
-        <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.1.0"/>
+        <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.1.0" />
         <PackageReference Include="Newtonsoft.Json" Version="13.0.4-beta1" />
         <PackageReference Include="RestSharp" Version="112.1.1-alpha.0.4" />
+        <PackageReference Include="Svg.Controls.Skia.Avalonia" Version="11.3.0.3" />
     </ItemGroup>
 
     <ItemGroup>
@@ -39,11 +41,6 @@
       <Content Include="Themes\dark.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Controls\" />
-      <Folder Include="Pages\" />
     </ItemGroup>
 
     <ItemGroup>
@@ -389,6 +386,686 @@
       </AvaloniaResource>
       <None Remove="Assets\Fonts\JetBrainsMonoNL-ThinItalic.ttf" />
       <AvaloniaResource Include="Assets\Fonts\JetBrainsMonoNL-ThinItalic.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Icons\chat.svg" />
+      <AvaloniaResource Include="Assets\Icons\chat.svg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined-Bold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined-Bold.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined-ExtraLight.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined-ExtraLight.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined-Light.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined-Light.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined-Medium.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined-Medium.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined-Regular.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined-Regular.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined-SemiBold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined-SemiBold.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined-Thin.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined-Thin.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined_28pt-Bold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined_28pt-Bold.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined_28pt-ExtraLight.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined_28pt-ExtraLight.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined_28pt-Light.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined_28pt-Light.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined_28pt-Medium.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined_28pt-Medium.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined_28pt-Regular.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined_28pt-Regular.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined_28pt-SemiBold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined_28pt-SemiBold.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined_28pt-Thin.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined_28pt-Thin.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined_36pt-Bold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined_36pt-Bold.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined_36pt-ExtraLight.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined_36pt-ExtraLight.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined_36pt-Light.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined_36pt-Light.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined_36pt-Medium.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined_36pt-Medium.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined_36pt-Regular.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined_36pt-Regular.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined_36pt-SemiBold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined_36pt-SemiBold.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined_36pt-Thin.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined_36pt-Thin.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined_48pt-Bold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined_48pt-Bold.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined_48pt-ExtraLight.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined_48pt-ExtraLight.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined_48pt-Light.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined_48pt-Light.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined_48pt-Medium.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined_48pt-Medium.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined_48pt-Regular.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined_48pt-Regular.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined_48pt-SemiBold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined_48pt-SemiBold.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined_48pt-Thin.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined_48pt-Thin.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined_Filled-Bold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined_Filled-Bold.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined_Filled-ExtraLight.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined_Filled-ExtraLight.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined_Filled-Light.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined_Filled-Light.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined_Filled-Medium.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined_Filled-Medium.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined_Filled-Regular.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined_Filled-Regular.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined_Filled-SemiBold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined_Filled-SemiBold.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined_Filled-Thin.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined_Filled-Thin.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined_Filled_28pt-Bold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined_Filled_28pt-Bold.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined_Filled_28pt-ExtraLight.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined_Filled_28pt-ExtraLight.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined_Filled_28pt-Light.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined_Filled_28pt-Light.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined_Filled_28pt-Medium.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined_Filled_28pt-Medium.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined_Filled_28pt-Regular.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined_Filled_28pt-Regular.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined_Filled_28pt-SemiBold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined_Filled_28pt-SemiBold.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined_Filled_28pt-Thin.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined_Filled_28pt-Thin.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined_Filled_36pt-Bold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined_Filled_36pt-Bold.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined_Filled_36pt-ExtraLight.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined_Filled_36pt-ExtraLight.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined_Filled_36pt-Light.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined_Filled_36pt-Light.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined_Filled_36pt-Medium.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined_Filled_36pt-Medium.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined_Filled_36pt-Regular.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined_Filled_36pt-Regular.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined_Filled_36pt-SemiBold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined_Filled_36pt-SemiBold.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined_Filled_36pt-Thin.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined_Filled_36pt-Thin.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined_Filled_48pt-Bold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined_Filled_48pt-Bold.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined_Filled_48pt-ExtraLight.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined_Filled_48pt-ExtraLight.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined_Filled_48pt-Light.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined_Filled_48pt-Light.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined_Filled_48pt-Medium.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined_Filled_48pt-Medium.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined_Filled_48pt-Regular.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined_Filled_48pt-Regular.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined_Filled_48pt-SemiBold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined_Filled_48pt-SemiBold.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsOutlined_Filled_48pt-Thin.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsOutlined_Filled_48pt-Thin.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded-Bold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded-Bold.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded-ExtraLight.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded-ExtraLight.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded-Light.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded-Light.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded-Medium.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded-Medium.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded-Regular.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded-Regular.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded-SemiBold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded-SemiBold.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded-Thin.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded-Thin.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded_28pt-Bold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded_28pt-Bold.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded_28pt-ExtraLight.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded_28pt-ExtraLight.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded_28pt-Light.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded_28pt-Light.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded_28pt-Medium.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded_28pt-Medium.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded_28pt-Regular.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded_28pt-Regular.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded_28pt-SemiBold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded_28pt-SemiBold.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded_28pt-Thin.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded_28pt-Thin.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded_36pt-Bold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded_36pt-Bold.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded_36pt-ExtraLight.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded_36pt-ExtraLight.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded_36pt-Light.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded_36pt-Light.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded_36pt-Medium.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded_36pt-Medium.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded_36pt-Regular.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded_36pt-Regular.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded_36pt-SemiBold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded_36pt-SemiBold.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded_36pt-Thin.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded_36pt-Thin.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded_48pt-Bold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded_48pt-Bold.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded_48pt-ExtraLight.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded_48pt-ExtraLight.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded_48pt-Light.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded_48pt-Light.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded_48pt-Medium.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded_48pt-Medium.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded_48pt-Regular.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded_48pt-Regular.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded_48pt-SemiBold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded_48pt-SemiBold.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded_48pt-Thin.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded_48pt-Thin.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded_Filled-Bold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded_Filled-Bold.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded_Filled-ExtraLight.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded_Filled-ExtraLight.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded_Filled-Light.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded_Filled-Light.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded_Filled-Medium.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded_Filled-Medium.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded_Filled-Regular.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded_Filled-Regular.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded_Filled-SemiBold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded_Filled-SemiBold.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded_Filled-Thin.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded_Filled-Thin.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded_Filled_28pt-Bold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded_Filled_28pt-Bold.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded_Filled_28pt-ExtraLight.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded_Filled_28pt-ExtraLight.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded_Filled_28pt-Light.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded_Filled_28pt-Light.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded_Filled_28pt-Medium.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded_Filled_28pt-Medium.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded_Filled_28pt-Regular.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded_Filled_28pt-Regular.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded_Filled_28pt-SemiBold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded_Filled_28pt-SemiBold.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded_Filled_28pt-Thin.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded_Filled_28pt-Thin.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded_Filled_36pt-Bold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded_Filled_36pt-Bold.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded_Filled_36pt-ExtraLight.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded_Filled_36pt-ExtraLight.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded_Filled_36pt-Light.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded_Filled_36pt-Light.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded_Filled_36pt-Medium.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded_Filled_36pt-Medium.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded_Filled_36pt-Regular.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded_Filled_36pt-Regular.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded_Filled_36pt-SemiBold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded_Filled_36pt-SemiBold.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded_Filled_36pt-Thin.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded_Filled_36pt-Thin.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded_Filled_48pt-Bold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded_Filled_48pt-Bold.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded_Filled_48pt-ExtraLight.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded_Filled_48pt-ExtraLight.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded_Filled_48pt-Light.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded_Filled_48pt-Light.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded_Filled_48pt-Medium.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded_Filled_48pt-Medium.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded_Filled_48pt-Regular.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded_Filled_48pt-Regular.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded_Filled_48pt-SemiBold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded_Filled_48pt-SemiBold.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsRounded_Filled_48pt-Thin.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsRounded_Filled_48pt-Thin.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp-Bold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp-Bold.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp-ExtraLight.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp-ExtraLight.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp-Light.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp-Light.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp-Medium.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp-Medium.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp-Regular.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp-Regular.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp-SemiBold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp-SemiBold.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp-Thin.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp-Thin.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp_28pt-Bold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp_28pt-Bold.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp_28pt-ExtraLight.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp_28pt-ExtraLight.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp_28pt-Light.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp_28pt-Light.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp_28pt-Medium.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp_28pt-Medium.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp_28pt-Regular.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp_28pt-Regular.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp_28pt-SemiBold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp_28pt-SemiBold.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp_28pt-Thin.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp_28pt-Thin.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp_36pt-Bold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp_36pt-Bold.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp_36pt-ExtraLight.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp_36pt-ExtraLight.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp_36pt-Light.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp_36pt-Light.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp_36pt-Medium.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp_36pt-Medium.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp_36pt-Regular.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp_36pt-Regular.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp_36pt-SemiBold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp_36pt-SemiBold.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp_36pt-Thin.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp_36pt-Thin.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp_48pt-Bold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp_48pt-Bold.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp_48pt-ExtraLight.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp_48pt-ExtraLight.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp_48pt-Light.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp_48pt-Light.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp_48pt-Medium.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp_48pt-Medium.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp_48pt-Regular.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp_48pt-Regular.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp_48pt-SemiBold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp_48pt-SemiBold.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp_48pt-Thin.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp_48pt-Thin.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp_Filled-Bold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp_Filled-Bold.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp_Filled-ExtraLight.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp_Filled-ExtraLight.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp_Filled-Light.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp_Filled-Light.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp_Filled-Medium.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp_Filled-Medium.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp_Filled-Regular.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp_Filled-Regular.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp_Filled-SemiBold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp_Filled-SemiBold.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp_Filled-Thin.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp_Filled-Thin.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp_Filled_28pt-Bold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp_Filled_28pt-Bold.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp_Filled_28pt-ExtraLight.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp_Filled_28pt-ExtraLight.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp_Filled_28pt-Light.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp_Filled_28pt-Light.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp_Filled_28pt-Medium.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp_Filled_28pt-Medium.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp_Filled_28pt-Regular.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp_Filled_28pt-Regular.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp_Filled_28pt-SemiBold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp_Filled_28pt-SemiBold.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp_Filled_28pt-Thin.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp_Filled_28pt-Thin.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp_Filled_36pt-Bold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp_Filled_36pt-Bold.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp_Filled_36pt-ExtraLight.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp_Filled_36pt-ExtraLight.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp_Filled_36pt-Light.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp_Filled_36pt-Light.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp_Filled_36pt-Medium.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp_Filled_36pt-Medium.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp_Filled_36pt-Regular.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp_Filled_36pt-Regular.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp_Filled_36pt-SemiBold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp_Filled_36pt-SemiBold.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp_Filled_36pt-Thin.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp_Filled_36pt-Thin.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp_Filled_48pt-Bold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp_Filled_48pt-Bold.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp_Filled_48pt-ExtraLight.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp_Filled_48pt-ExtraLight.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp_Filled_48pt-Light.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp_Filled_48pt-Light.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp_Filled_48pt-Medium.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp_Filled_48pt-Medium.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp_Filled_48pt-Regular.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp_Filled_48pt-Regular.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp_Filled_48pt-SemiBold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp_Filled_48pt-SemiBold.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\MaterialSymbolsSharp_Filled_48pt-Thin.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\MaterialSymbolsSharp_Filled_48pt-Thin.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Icons\inferyn.png" />
+      <AvaloniaResource Include="Assets\Icons\inferyn.png">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </AvaloniaResource>
     </ItemGroup>

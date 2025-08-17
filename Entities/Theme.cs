@@ -10,7 +10,9 @@ public class Theme
 {
     public Color WindowBackground { get; set; } = Color.Parse("#17171a");
     public Color PanelBackground { get; set; } = Color.Parse("#121214");
-    public Color AccentColour { get; set; } = Color.Parse("#38b178");
+    public Color Accent { get; set; } = Color.Parse("#38b178");
+    public Color Text { get; set; } = Color.Parse("#f3f3f3");
+    public Color TextMuted { get; set; } = Color.Parse("#6c6c6c");
     public double CornerRadius { get; set; } = 10.0;
     public double Opacity { get; set; } = 1.0;
     public double Tint { get; set; } = 1.0;
@@ -31,7 +33,9 @@ public class Theme
         // Copy values
         WindowBackground = Color.Parse(themeValues["WindowBackground"].ToString());
         PanelBackground = Color.Parse(themeValues["PanelBackground"].ToString());
-        AccentColour = Color.Parse(themeValues["AccentColour"].ToString());
+        Accent = Color.Parse(themeValues["Accent"].ToString());
+        Text = Color.Parse(themeValues["Text"].ToString());
+        TextMuted = Color.Parse(themeValues["TextMuted"].ToString());
         CornerRadius = CornerRadius;
         Opacity = Opacity;
         Tint = Tint;
@@ -45,7 +49,9 @@ public class Theme
 
         resources["WindowBackground"] = WindowBackground;
         resources["PanelBackground"] = PanelBackground;
-        resources["AccentColour"] = AccentColour;
+        resources["Accent"] = Accent;
+        resources["Text"] = Text;
+        resources["TextMuted"] = TextMuted;
         resources["CornerRadius"] = CornerRadius;
         resources["Opacity"] = Opacity;
         resources["Tint"] = Tint;

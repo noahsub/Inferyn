@@ -8,6 +8,8 @@ using Avalonia.Markup.Xaml;
 using Avalonia.Media;
 using Avalonia.Threading;
 using Inferyn.Entities;
+using Inferyn.Managers;
+using Inferyn.Pages;
 using Color = Avalonia.Media.Color;
 
 namespace Inferyn;
@@ -15,14 +17,6 @@ namespace Inferyn;
 public partial class App : Application
 {
     public override void Initialize()
-    {
-        AvaloniaXamlLoader.Load(this);
-    }
-
-    /// <summary>
-    /// Startup logic for the application.
-    /// </summary>
-    public override void OnFrameworkInitializationCompleted()
     {
         // Theme
         var resources = Current?.Resources;
@@ -38,6 +32,16 @@ public partial class App : Application
             TintColor = Colors.Black,
             TintOpacity = (double)resources["Tint"]
         };
+        
+        AvaloniaXamlLoader.Load(this);
+    }
+
+    /// <summary>
+    /// Startup logic for the application.
+    /// </summary>
+    public override void OnFrameworkInitializationCompleted()
+    {
+        var resources = Current?.Resources;
         
         // Application Startup
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
@@ -69,6 +73,7 @@ public partial class App : Application
                     // Create application pages
                     // await NavigationManager.CreatePage(new MainPage());
                     // await NavigationManager.CreatePage(new UpdatePage());
+                    await NavigationManager.CreatePage(new ChatPage());
 
                     // IMPORTANT: MainWindow must be created after all pages are created, otherwise,
                     // the first page will be initialized twice

@@ -34,7 +34,7 @@
                 <Rectangle Grid.Column="0" Opacity="1">
                     <Rectangle.Fill>
                         <LinearGradientBrush EndPoint="950,0" StartPoint="350,0">
-                            <GradientStop Color="{StaticResource AccentColour}" Offset="0" />
+                            <GradientStop Color="{StaticResource Accent}" Offset="0" />
                             <GradientStop Color="Transparent" Offset="1" />
                         </LinearGradientBrush>
                     </Rectangle.Fill>

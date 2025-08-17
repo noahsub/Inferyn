@@ -1,0 +1,50 @@
+﻿<UserControl
+    d:DesignHeight="1440"
+    d:DesignWidth="150"
+    mc:Ignorable="d"
+    x:Class="Inferyn.Controls.Navbar"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid Background="{StaticResource PanelBackground}">
+        <StackPanel
+            HorizontalAlignment="Center"
+            Margin="0,40,0,0"
+            Spacing="20">
+            <Button
+                Classes="NavButton"
+                Click="ChatPageButton_OnClick"
+                Content="&#xe0ca;"
+                x:Name="ChatPageButton" />
+            <Button
+                Classes="NavButton"
+                Click="ModelPageButton_OnClick"
+                Content="&#xf346;"
+                x:Name="ModelPageButton" />
+            <Button
+                Classes="NavButton"
+                Click="ServerPageButton_OnClick"
+                Content="&#xe875;"
+                x:Name="ServerPageButton" />
+            <Button
+                Classes="NavButton"
+                Click="HistoryPageButton_OnClick"
+                Content="&#xe922;"
+                x:Name="HistoryPageButton" />
+            <Button
+                Classes="NavButton"
+                Click="UserPageButton_OnClick"
+                Content="&#xea1d;"
+                x:Name="UserPageButton" />
+        </StackPanel>
+        <Button
+            Classes="NavButton"
+            Click="OptionsPageButton_OnClick"
+            Content="&#xeb39;"
+            HorizontalAlignment="Center"
+            Margin="0,0,0,40"
+            VerticalAlignment="Bottom"
+            x:Name="OptionsPageButton" />
+    </Grid>
+</UserControl>

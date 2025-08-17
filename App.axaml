@@ -1,5 +1,6 @@
+<!--  Copyright (C) 2025 noahsub  -->
 <Application
-    RequestedThemeVariant="Default"
+    RequestedThemeVariant="Dark"
     x:Class="Inferyn.App"
     xmlns="https://github.com/avaloniaui"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
@@ -8,6 +9,47 @@
     <Application.Styles>
         <FluentTheme />
     </Application.Styles>
-    <Application.Resources />
-    <Application.Styles />
+    <Application.Resources>
+        <FontFamily x:Key="JetBrainsMono">avares://Inferyn/Assets/Fonts#JetBrains Mono</FontFamily>
+        <FontFamily x:Key="Inter">avares://Inferyn/Assets/Fonts#Inter</FontFamily>
+        <FontFamily x:Key="MaterialSymbolsOutlined">avares://Inferyn/Assets/Fonts/MaterialSymbolsOutlined.ttf#Material Symbols Outlined</FontFamily>
+        <FontFamily x:Key="MaterialSymbolsRounded">avares://Inferyn/Assets/Fonts/MaterialSymbolsRounded.ttf#Material Symbols Rounded</FontFamily>
+        <FontFamily x:Key="MaterialSymbolsSharp">avares://Inferyn/Assets/Fonts/MaterialSymbolsSharp.ttf#Material Symbols Sharp</FontFamily>
+    </Application.Resources>
+    <Application.Styles>
+        <!--  Button Styles  -->
+        <!-- <Style Selector="Button"> -->
+        <!--     <Setter Property="FontFamily" Value="{StaticResource Inter}" /> -->
+        <!--     <Setter Property="Background" Value="Transparent" /> -->
+        <!--     <Setter Property="BorderBrush" Value="Transparent" /> -->
+        <!--     ~1~ <Setter Property="Foreground" Value="{StaticResource PrimaryText}" /> @1@ -->
+        <!--     ~1~ <Setter Property="CornerRadius" Value="{StaticResource Radius}" /> @1@ -->
+        <!-- </Style> -->
+        <!-- <Style Selector="Button:pressed /template/ ContentPresenter#PART_ContentPresenter"> -->
+        <!--     <Setter Property="Background" Value="{StaticResource Accent}" /> -->
+        <!--     <Setter Property="Foreground" Value="{StaticResource PanelBackground}" /> -->
+        <!-- </Style> -->
+
+        <!--  Nav Button Styles  -->
+        <Style Selector="Button.NavButton">
+            <Setter Property="FontFamily" Value="{StaticResource MaterialSymbolsOutlined}" />
+            <Setter Property="FontSize" Value="30" />
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="BorderBrush" Value="Transparent" />
+            <Setter Property="Foreground" Value="{StaticResource TextMuted}" />
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+        </Style>
+
+        <Style Selector="Button.NavButton:pointerover /template/ ContentPresenter">
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="Foreground" Value="{StaticResource Text}" />
+        </Style>
+
+        <!--  Label Styles  -->
+        <Style Selector="Label">
+            <Setter Property="FontFamily" Value="{StaticResource Inter}" />
+            <Setter Property="Foreground" Value="{StaticResource Text}" />
+        </Style>
+    </Application.Styles>
 </Application>

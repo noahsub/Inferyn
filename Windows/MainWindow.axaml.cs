@@ -14,7 +14,7 @@ public partial class MainWindow : Window
         // Add the window to the list of open windows
         WindowManager.AddWindow(this);
         
-        NavigationManager.SwitchPage(this, "MainPage");
+        NavigationManager.SwitchPage(this, "ChatPage");
     }
     
     /// <summary>

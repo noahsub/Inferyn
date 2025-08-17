@@ -1,7 +1,9 @@
 ﻿{
   "WindowBackground": "#17171a",
   "PanelBackground": "#121214",
-  "AccentColour": "#38b178",
+  "Accent": "#38b178",
+  "Text": "#f3f3f3",
+  "TextMuted": "#6c6c6c",
   "CornerRadius": 10.0,
   "Opacity": 1.0,
   "Tint": 1.0
