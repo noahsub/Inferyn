@@ -44,223 +44,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <None Remove="Assets\Fonts\Inter_18pt-Black.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_18pt-Black.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_18pt-BlackItalic.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_18pt-BlackItalic.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_18pt-Bold.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_18pt-Bold.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_18pt-BoldItalic.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_18pt-BoldItalic.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_18pt-ExtraBold.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_18pt-ExtraBold.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_18pt-ExtraBoldItalic.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_18pt-ExtraBoldItalic.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_18pt-ExtraLight.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_18pt-ExtraLight.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_18pt-ExtraLightItalic.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_18pt-ExtraLightItalic.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_18pt-Italic.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_18pt-Italic.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_18pt-Light.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_18pt-Light.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_18pt-LightItalic.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_18pt-LightItalic.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_18pt-Medium.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_18pt-Medium.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_18pt-MediumItalic.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_18pt-MediumItalic.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_18pt-Regular.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_18pt-Regular.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_18pt-SemiBold.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_18pt-SemiBold.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_18pt-SemiBoldItalic.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_18pt-SemiBoldItalic.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_18pt-Thin.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_18pt-Thin.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_18pt-ThinItalic.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_18pt-ThinItalic.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_24pt-Black.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_24pt-Black.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_24pt-BlackItalic.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_24pt-BlackItalic.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_24pt-Bold.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_24pt-Bold.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_24pt-BoldItalic.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_24pt-BoldItalic.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_24pt-ExtraBold.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_24pt-ExtraBold.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_24pt-ExtraBoldItalic.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_24pt-ExtraBoldItalic.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_24pt-ExtraLight.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_24pt-ExtraLight.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_24pt-ExtraLightItalic.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_24pt-ExtraLightItalic.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_24pt-Italic.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_24pt-Italic.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_24pt-Light.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_24pt-Light.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_24pt-LightItalic.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_24pt-LightItalic.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_24pt-Medium.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_24pt-Medium.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_24pt-MediumItalic.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_24pt-MediumItalic.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_24pt-Regular.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_24pt-Regular.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_24pt-SemiBold.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_24pt-SemiBold.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_24pt-SemiBoldItalic.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_24pt-SemiBoldItalic.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_24pt-Thin.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_24pt-Thin.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_24pt-ThinItalic.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_24pt-ThinItalic.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_28pt-Black.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_28pt-Black.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_28pt-BlackItalic.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_28pt-BlackItalic.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_28pt-Bold.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_28pt-Bold.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_28pt-BoldItalic.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_28pt-BoldItalic.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_28pt-ExtraBold.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_28pt-ExtraBold.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_28pt-ExtraBoldItalic.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_28pt-ExtraBoldItalic.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_28pt-ExtraLight.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_28pt-ExtraLight.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_28pt-ExtraLightItalic.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_28pt-ExtraLightItalic.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_28pt-Italic.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_28pt-Italic.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_28pt-Light.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_28pt-Light.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_28pt-LightItalic.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_28pt-LightItalic.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_28pt-Medium.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_28pt-Medium.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_28pt-MediumItalic.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_28pt-MediumItalic.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_28pt-Regular.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_28pt-Regular.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_28pt-SemiBold.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_28pt-SemiBold.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_28pt-SemiBoldItalic.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_28pt-SemiBoldItalic.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_28pt-Thin.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_28pt-Thin.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\Inter_28pt-ThinItalic.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Inter_28pt-ThinItalic.ttf">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </AvaloniaResource>
-      <None Remove="Assets\Fonts\JetBrainsMono-Bold.ttf" />
       <AvaloniaResource Include="Assets\Fonts\JetBrainsMono-Bold.ttf">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </AvaloniaResource>
@@ -1066,6 +849,79 @@
       </AvaloniaResource>
       <None Remove="Assets\Icons\inferyn.png" />
       <AvaloniaResource Include="Assets\Icons\inferyn.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\Inter.ttf" />
+      <None Remove="Assets\Fonts\Inter-Black.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\Inter-Black.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\Inter-BlackItalic.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\Inter-BlackItalic.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\Inter-Bold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\Inter-Bold.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\Inter-BoldItalic.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\Inter-BoldItalic.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\Inter-ExtraBold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\Inter-ExtraBold.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\Inter-ExtraBoldItalic.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\Inter-ExtraBoldItalic.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\Inter-ExtraLight.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\Inter-ExtraLight.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\Inter-ExtraLightItalic.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\Inter-ExtraLightItalic.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\Inter-Italic.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\Inter-Italic.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\Inter-Light.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\Inter-Light.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\Inter-LightItalic.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\Inter-LightItalic.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\Inter-Medium.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\Inter-Medium.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\Inter-MediumItalic.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\Inter-MediumItalic.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\Inter-Regular.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\Inter-Regular.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\Inter-SemiBold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\Inter-SemiBold.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\Inter-SemiBoldItalic.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\Inter-SemiBoldItalic.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\Inter-Thin.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\Inter-Thin.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Fonts\Inter-ThinItalic.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\Inter-ThinItalic.ttf">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </AvaloniaResource>
     </ItemGroup>

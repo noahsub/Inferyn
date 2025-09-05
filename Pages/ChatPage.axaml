@@ -11,10 +11,12 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="75" />
             <!--  Navbar  -->
-            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="75" />
+            <!--  Spacer  -->
+            <ColumnDefinition Width="4" />
             <!--  Sidebar  -->
+            <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="*" />
             <!--  Main content  -->
         </Grid.ColumnDefinitions>
@@ -22,11 +24,14 @@
         <!--  NAVBAR  -->
         <controls:Navbar Grid.Column="0" />
 
+        <!--  SPACER  -->
+        <Rectangle Fill="{StaticResource WindowBackground}" Grid.Column="1" />
+
         <!--  SIDEBAR  -->
         <SplitView
             CompactPaneLength="0"
             DisplayMode="Inline"
-            Grid.Column="1"
+            Grid.Column="2"
             IsPaneOpen="True"
             OpenPaneLength="600"
             PaneBackground="{StaticResource PanelBackground}"
@@ -34,60 +39,74 @@
 
             <!--  Sidebar Pane  -->
             <SplitView.Pane>
-                <StackPanel Margin="40">
+                <StackPanel
+                    Grid.Column="0"
+                    Margin="40"
+                    Spacing="40">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="Auto" />
                         </Grid.ColumnDefinitions>
 
-                        <StackPanel Orientation="Horizontal" Spacing="20">
+                        <StackPanel
+                            Grid.Column="0"
+                            Orientation="Horizontal"
+                            Spacing="20">
                             <Image Source="avares://Inferyn/Assets/Icons/inferyn.png" Width="50" />
-                            <Label
-                                Content="Inferyn"
-                                FontSize="20"
-                                VerticalContentAlignment="Center" />
+                            <Label Content="Inferyn" VerticalContentAlignment="Center" />
                         </StackPanel>
 
-                        <!--  Sidebar Collapse Button  -->
                         <Button
+                            Background="{StaticResource PanelBackground}"
                             Classes="NavButton"
                             Click="ToggleSidebar_Click"
-                            Content="&#xf717;"
-                            FontFamily="{StaticResource MaterialSymbolsOutlined}"
+                            Content="&#xf704;"
+                            CornerRadius="0 10 10 0"
                             FontSize="25"
-                            Foreground="{StaticResource TextMuted}"
                             Grid.Column="1"
-                            HorizontalAlignment="Right"
-                            VerticalAlignment="Center" />
+                            x:Name="CollapseSidebarButton" />
                     </Grid>
+
+                    <StackPanel Spacing="10">
+                        <Label
+                            Content="Servers"
+                            Foreground="{StaticResource TextMuted}"
+                            Margin="0,0,0,10" />
+                        <controls:Server />
+                        <controls:Server />
+                        <controls:Server />
+                        <controls:Server />
+                        <controls:Server />
+                    </StackPanel>
                 </StackPanel>
             </SplitView.Pane>
-
             <SplitView.Content />
         </SplitView>
 
         <!--  MAIN CONTENT  -->
-        <Grid Grid.Column="2">
+        <Grid Grid.Column="3">
             <StackPanel
                 HorizontalAlignment="Center"
                 Spacing="20"
                 VerticalAlignment="Center">
                 <TextBlock HorizontalAlignment="Center" Text="Main Content Area" />
-
-                <!--  TEMP EXPAND BUTTON  -->
-
             </StackPanel>
-
-            <Button
-                Background="{StaticResource PanelBackground}"
-                Classes="NavButton"
-                Click="ToggleSidebar_Click"
-                Content="&#xf716;"
-                CornerRadius="0 10 10 0"
-                FontSize="25"
-                Margin="-1,40,0,0"
-                VerticalAlignment="Top" />
         </Grid>
+
+        <!--  SIDEBAR EXPAND BUTTON  -->
+        <Button
+            Background="{StaticResource PanelBackground}"
+            Classes="NavButton"
+            Click="ToggleSidebar_Click"
+            Content="&#xf716;"
+            CornerRadius="0 10 10 0"
+            FontSize="25"
+            Grid.Column="1"
+            Grid.ColumnSpan="3"
+            IsVisible="False"
+            Margin="-1,40,0,0"
+            VerticalAlignment="Top"
+            x:Name="ExpandSidebarButton" />
     </Grid>
 </UserControl>

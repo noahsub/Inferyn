@@ -50,6 +50,9 @@
         <Style Selector="Label">
             <Setter Property="FontFamily" Value="{StaticResource Inter}" />
             <Setter Property="Foreground" Value="{StaticResource Text}" />
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="FontWeight" Value="Light" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
         </Style>
     </Application.Styles>
 </Application>

@@ -32,8 +32,19 @@ public partial class ChatPage : UserControl, IPage
 
     private void ToggleSidebar_Click(object? sender, RoutedEventArgs e)
     {
+        // Toggle sidebar first
         SidebarSplitView.IsPaneOpen = !SidebarSplitView.IsPaneOpen;
+
+        // Update button visibility based on new state
+        if (SidebarSplitView.IsPaneOpen)
+        {
+            ExpandSidebarButton.IsVisible = false;
+            CollapseSidebarButton.IsVisible = true;
+        }
+        else
+        {
+            ExpandSidebarButton.IsVisible = true;
+            CollapseSidebarButton.IsVisible = false;
+        }
     }
-
-
 }

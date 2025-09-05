@@ -65,7 +65,7 @@ public partial class App : Application
                 // splashScreen.SetLoadingTextUiThread("CHECKING FOR UPDATES");
                 // DataManager.LatestVersion = await WebManager.GetLatestVersion();
 
-                Thread.Sleep(2000);
+                // Thread.Sleep(2000);
 
                 // Switch to the UI thread to update the UI
                 Dispatcher.UIThread.Post(async () =>
