@@ -17,7 +17,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Panel>
         <ExperimentalAcrylicBorder
-            CornerRadius="{StaticResource Radius}"
+            CornerRadius="{StaticResource CornerRadius}"
             IsHitTestVisible="True"
             PointerPressed="InputElement_OnPointerPressed">
             <ExperimentalAcrylicBorder.Material>

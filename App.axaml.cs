@@ -74,6 +74,7 @@ public partial class App : Application
                     // await NavigationManager.CreatePage(new MainPage());
                     // await NavigationManager.CreatePage(new UpdatePage());
                     await NavigationManager.CreatePage(new ChatPage());
+                    await NavigationManager.CreatePage(new WelcomePage());
 
                     // IMPORTANT: MainWindow must be created after all pages are created, otherwise,
                     // the first page will be initialized twice

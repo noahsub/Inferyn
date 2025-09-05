@@ -2,6 +2,7 @@
 using System.IO;
 using Avalonia.Media;
 using System.Text.Json;
+using Avalonia;
 using Newtonsoft.Json;
 
 namespace Inferyn.Entities;
@@ -13,10 +14,12 @@ public class Theme
     public Color Accent { get; set; } = Color.Parse("#38b178");
     public Color Text { get; set; } = Color.Parse("#f3f3f3");
     public Color TextMuted { get; set; } = Color.Parse("#6c6c6c");
-    public double CornerRadius { get; set; } = 10.0;
+    public double Radius { get; set; } = 10.0;
+    public CornerRadius CornerRadius { get; set; } = new(10.0);
     public double Opacity { get; set; } = 1.0;
     public double Tint { get; set; } = 1.0;
-    
+    public Color ComponentBackground { get; set; } = Color.Parse("#1e1e21");
+
     public void Load(string themeFileName)
     {
         var themeFilePath = Path.Combine("Themes", $"{themeFileName}.json");
@@ -36,9 +39,11 @@ public class Theme
         Accent = Color.Parse(themeValues["Accent"].ToString());
         Text = Color.Parse(themeValues["Text"].ToString());
         TextMuted = Color.Parse(themeValues["TextMuted"].ToString());
-        CornerRadius = CornerRadius;
+        Radius = Radius;
         Opacity = Opacity;
         Tint = Tint;
+        ComponentBackground = Color.Parse(themeValues["ComponentBackground"].ToString());
+        CornerRadius = CornerRadius.Parse(themeValues["CornerRadius"].ToString());
     }
 
     // Apply theme to Avalonia resources
@@ -52,8 +57,10 @@ public class Theme
         resources["Accent"] = Accent;
         resources["Text"] = Text;
         resources["TextMuted"] = TextMuted;
-        resources["CornerRadius"] = CornerRadius;
+        resources["Radius"] = Radius;
         resources["Opacity"] = Opacity;
         resources["Tint"] = Tint;
+        resources["ComponentBackground"] = ComponentBackground;
+        resources["CornerRadius"] = CornerRadius;
     }
 }
