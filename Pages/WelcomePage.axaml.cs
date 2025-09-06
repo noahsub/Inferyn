@@ -45,7 +45,7 @@ public partial class WelcomePage : UserControl, IPage
         {
             SummaryUsernameLabel.Content = UsernameTextBox.Text;
             SummaryNicknameLabel.Content = NameTextBox.Text;
-            SummaryProfilePicture.Source = ProfileImage.Source;
+            SummaryProfileImage.Source = ProfileImage.Source;
         }
     }
 
@@ -62,6 +62,12 @@ public partial class WelcomePage : UserControl, IPage
         }
         
         FileManager.CreateDirectory(Path.Combine(FileManager.GetDataDirectory(), "Profiles", UsernameTextBox.Text ?? ""));
+        
+        // Save the user data
+        var username = UsernameTextBox.Text ?? "";
+        var name = NameTextBox.Text ?? "";
+        var profilePicturePath = ProfileImagePathTextBox.Text ?? "";
+        UserManager.CreateUser(username, name, profilePicturePath);
     }
 
     private void BrowseButton_OnClick(object? sender, RoutedEventArgs e)
@@ -73,7 +79,9 @@ public partial class WelcomePage : UserControl, IPage
             {
                 Dispatcher.UIThread.InvokeAsync(() =>
                 {
-                    ProfileImage.Source = new Avalonia.Media.Imaging.Bitmap(t.Result);
+                    var profileImagePath = t.Result;
+                    ProfileImagePathTextBox.Text = profileImagePath;
+                    ProfileImage.Source = new Avalonia.Media.Imaging.Bitmap(profileImagePath);
                 });
             }
         });

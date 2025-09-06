@@ -13,8 +13,21 @@ public partial class MainWindow : Window
         
         // Add the window to the list of open windows
         WindowManager.AddWindow(this);
-        
-        NavigationManager.SwitchPage(this, "WelcomePage");
+
+        // If there are no users, go to the welcome page
+        if (UserManager.FindUsers().Count == 0)
+        {
+            NavigationManager.SwitchPage(this, "WelcomePage");
+        }
+
+        // Otherwise, go to the chat page
+        else
+        {
+            NavigationManager.SwitchPage(this, "ChatPage");
+            // TODO: Program currently only supports one user, so the current user is set as the first user found, 
+            // but in the future, a user selection screen should be implemented
+            UserManager.CurrentUser = UserManager.FindUsers()[0];
+        }
     }
     
     /// <summary>

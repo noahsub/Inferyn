@@ -125,6 +125,14 @@
                         Content="Choose a profile picture"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center" />
+                    <TextBox
+                        Height="50"
+                        HorizontalAlignment="Center"
+                        HorizontalContentAlignment="Center"
+                        VerticalAlignment="Center"
+                        Watermark="path/to/image.png"
+                        Width="400"
+                        x:Name="ProfileImagePathTextBox" />
                     <Button
                         Classes="PrimaryButton"
                         Click="BrowseButton_OnClick"
@@ -145,7 +153,7 @@
                         Margin="0,40,0,0"
                         VerticalAlignment="Center"
                         Width="200"
-                        x:Name="ProfilePictureTabNavButton" />
+                        x:Name="ProfileImageTabNavButton" />
                 </StackPanel>
             </TabItem>
             <TabItem Header="Summary">
@@ -159,7 +167,7 @@
                         CornerRadius="200"
                         Height="400"
                         Width="400">
-                        <Image Source="avares://Inferyn/Assets/Images/Profile/generic_profile.png" x:Name="SummaryProfilePicture" />
+                        <Image Source="avares://Inferyn/Assets/Images/Profile/generic_profile.png" x:Name="SummaryProfileImage" />
                     </Border>
                     <Label
                         Content="Username"

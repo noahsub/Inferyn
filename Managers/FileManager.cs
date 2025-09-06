@@ -20,7 +20,8 @@ public class FileManager
 
     public static string GetDataDirectory()
     {
-        return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Documents", "Inferyn");
+        // return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Documents", "Inferyn");
+        return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Inferyn");
     }
     
     public static async Task<string?> BrowseForFileAsync(TopLevel topLevel, string directoryPath, string[] filters)
