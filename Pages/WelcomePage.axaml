@@ -12,7 +12,10 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <TabControl CornerRadius="{StaticResource ControlCornerRadius}" Margin="40">
+        <TabControl
+            CornerRadius="{StaticResource ControlCornerRadius}"
+            Margin="40"
+            x:Name="ProfileTabControl">
             <TabItem Header="Welcome">
                 <StackPanel
                     HorizontalAlignment="Center"
@@ -34,19 +37,51 @@
                         Margin="0,-20,0,0" />
                     <Button
                         Classes="PrimaryButton"
+                        Click="TabNavButton_OnClick"
                         Content="Create Profile"
                         Foreground="{StaticResource Text}"
                         Height="50"
                         HorizontalAlignment="Center"
                         Margin="0,40,0,0"
                         VerticalAlignment="Center"
-                        Width="200" />
+                        Width="200"
+                        x:Name="WelcomeTabNavButton" />
                 </StackPanel>
             </TabItem>
-            <TabItem Header="Name">
+            <TabItem Header="Username">
                 <StackPanel
                     HorizontalAlignment="Center"
-                    Spacing="10"
+                    Spacing="20"
+                    VerticalAlignment="Center">
+                    <Label
+                        Content="What should your account be called?"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center" />
+                    <TextBox
+                        Height="50"
+                        HorizontalAlignment="Center"
+                        HorizontalContentAlignment="Center"
+                        VerticalAlignment="Center"
+                        Watermark="Enter your username"
+                        Width="400"
+                        x:Name="UsernameTextBox" />
+                    <Button
+                        Classes="PrimaryButton"
+                        Click="TabNavButton_OnClick"
+                        Content="Next"
+                        Foreground="{StaticResource Text}"
+                        Height="50"
+                        HorizontalAlignment="Center"
+                        Margin="0,40,0,0"
+                        VerticalAlignment="Center"
+                        Width="200"
+                        x:Name="UsernameTabNavButton" />
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Nickname">
+                <StackPanel
+                    HorizontalAlignment="Center"
+                    Spacing="20"
                     VerticalAlignment="Center">
                     <Label
                         Content="What should we call you?"
@@ -55,8 +90,101 @@
                     <TextBox
                         Height="50"
                         HorizontalAlignment="Center"
+                        HorizontalContentAlignment="Center"
                         VerticalAlignment="Center"
-                        Width="400" />
+                        Watermark="Enter your name/nickname"
+                        Width="400"
+                        x:Name="NameTextBox" />
+                    <Button
+                        Classes="PrimaryButton"
+                        Click="TabNavButton_OnClick"
+                        Content="Next"
+                        Foreground="{StaticResource Text}"
+                        Height="50"
+                        HorizontalAlignment="Center"
+                        Margin="0,40,0,0"
+                        VerticalAlignment="Center"
+                        Width="200"
+                        x:Name="NicknameTabNavButton" />
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Profile Picture">
+                <StackPanel
+                    HorizontalAlignment="Center"
+                    Spacing="20"
+                    VerticalAlignment="Center">
+                    <Border
+                        Background="CadetBlue"
+                        ClipToBounds="True"
+                        CornerRadius="200"
+                        Height="400"
+                        Width="400">
+                        <Image Source="avares://Inferyn/Assets/Images/Profile/generic_profile.png" x:Name="ProfileImage" />
+                    </Border>
+                    <Label
+                        Content="Choose a profile picture"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center" />
+                    <Button
+                        Classes="PrimaryButton"
+                        Click="BrowseButton_OnClick"
+                        Content="Browse"
+                        Height="50"
+                        HorizontalAlignment="Center"
+                        HorizontalContentAlignment="Center"
+                        VerticalAlignment="Center"
+                        Width="400"
+                        x:Name="BrowseButton" />
+                    <Button
+                        Classes="PrimaryButton"
+                        Click="TabNavButton_OnClick"
+                        Content="Next"
+                        Foreground="{StaticResource Text}"
+                        Height="50"
+                        HorizontalAlignment="Center"
+                        Margin="0,40,0,0"
+                        VerticalAlignment="Center"
+                        Width="200"
+                        x:Name="ProfilePictureTabNavButton" />
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Summary">
+                <StackPanel
+                    HorizontalAlignment="Center"
+                    Spacing="20"
+                    VerticalAlignment="Center">
+                    <Border
+                        Background="CadetBlue"
+                        ClipToBounds="True"
+                        CornerRadius="200"
+                        Height="400"
+                        Width="400">
+                        <Image Source="avares://Inferyn/Assets/Images/Profile/generic_profile.png" x:Name="SummaryProfilePicture" />
+                    </Border>
+                    <Label
+                        Content="Username"
+                        FontSize="24"
+                        FontWeight="SemiBold"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        x:Name="SummaryUsernameLabel" />
+                    <Label
+                        Content="Nickname"
+                        FontStyle="Italic"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        x:Name="SummaryNicknameLabel" />
+                    <Button
+                        Classes="PrimaryButton"
+                        Click="SummaryTabNavButton_OnClick"
+                        Content="Finish Profile"
+                        Foreground="{StaticResource Text}"
+                        Height="50"
+                        HorizontalAlignment="Center"
+                        Margin="0,40,0,0"
+                        VerticalAlignment="Center"
+                        Width="200"
+                        x:Name="SummaryTabNavButton" />
                 </StackPanel>
             </TabItem>
         </TabControl>

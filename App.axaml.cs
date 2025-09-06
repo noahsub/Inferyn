@@ -1,5 +1,7 @@
 using System;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 using Avalonia;
@@ -70,6 +72,9 @@ public partial class App : Application
                 // Switch to the UI thread to update the UI
                 Dispatcher.UIThread.Post(async () =>
                 {
+                    // Create Inferyn folder in OS's current user's Documents folder
+                    FileManager.CreateDirectory(FileManager.GetDataDirectory());
+                    
                     // Create application pages
                     // await NavigationManager.CreatePage(new MainPage());
                     // await NavigationManager.CreatePage(new UpdatePage());

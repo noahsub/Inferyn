@@ -18,6 +18,7 @@
         <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.1.0" />
         <PackageReference Include="Newtonsoft.Json" Version="13.0.4-beta1" />
         <PackageReference Include="RestSharp" Version="112.1.1-alpha.0.4" />
+        <PackageReference Include="SkiaSharp" Version="3.119.0" />
         <PackageReference Include="Svg.Controls.Skia.Avalonia" Version="11.3.0.3" />
     </ItemGroup>
 
@@ -922,6 +923,10 @@
       </AvaloniaResource>
       <None Remove="Assets\Fonts\Inter-ThinItalic.ttf" />
       <AvaloniaResource Include="Assets\Fonts\Inter-ThinItalic.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\Images\Profile\generic_profile.png" />
+      <AvaloniaResource Include="Assets\Images\Profile\generic_profile.png">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </AvaloniaResource>
     </ItemGroup>
