@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
@@ -10,6 +11,8 @@ namespace Inferyn.Controls;
 
 public partial class Navbar : UserControl
 {
+    public event EventHandler? NavbarExpanded;
+    
     public Navbar()
     {
         InitializeComponent();
@@ -106,5 +109,10 @@ public partial class Navbar : UserControl
     private void OptionsPageButton_OnClick(object? sender, RoutedEventArgs e)
     {
         SetSelected("OptionsPageButton");
+    }
+
+    private void ExpandButton_OnClick(object? sender, RoutedEventArgs e)
+    {
+        NavbarExpanded?.Invoke(this, EventArgs.Empty);
     }
 }

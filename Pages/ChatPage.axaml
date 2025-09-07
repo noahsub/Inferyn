@@ -22,7 +22,10 @@
         </Grid.ColumnDefinitions>
 
         <!--  NAVBAR  -->
-        <controls:Navbar Grid.Column="0" />
+        <controls:Navbar
+            Grid.Column="0"
+            NavbarExpanded="Navbar_OnNavbarExpanded"
+            x:Name="Navbar" />
 
         <!--  SPACER  -->
         <Rectangle Fill="{StaticResource WindowBackground}" Grid.Column="1" />
@@ -60,7 +63,7 @@
                         <Button
                             Background="{StaticResource PanelBackground}"
                             Classes="NavButton"
-                            Click="ToggleSidebar_Click"
+                            Click="CollapseSidebarButton_OnClick"
                             Content="&#xf704;"
                             CornerRadius="0 10 10 0"
                             FontSize="25"
@@ -93,20 +96,5 @@
                 <TextBlock HorizontalAlignment="Center" Text="Main Content Area" />
             </StackPanel>
         </Grid>
-
-        <!--  SIDEBAR EXPAND BUTTON  -->
-        <Button
-            Background="{StaticResource PanelBackground}"
-            Classes="NavButton"
-            Click="ToggleSidebar_Click"
-            Content="&#xf716;"
-            CornerRadius="0 10 10 0"
-            FontSize="25"
-            Grid.Column="1"
-            Grid.ColumnSpan="3"
-            IsVisible="False"
-            Margin="-1,40,0,0"
-            VerticalAlignment="Top"
-            x:Name="ExpandSidebarButton" />
     </Grid>
 </UserControl>

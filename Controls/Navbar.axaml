@@ -14,6 +14,12 @@
             Spacing="20">
             <Button
                 Classes="NavButton"
+                Click="ExpandButton_OnClick"
+                Content="&#xf716;"
+                IsVisible="False"
+                x:Name="ExpandButton" />
+            <Button
+                Classes="NavButton"
                 Click="ChatPageButton_OnClick"
                 Content="&#xe0ca;"
                 x:Name="ChatPageButton" />

@@ -1,4 +1,5 @@
-﻿using Avalonia;
+﻿using System;
+using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
@@ -30,7 +31,7 @@ public partial class ChatPage : UserControl, IPage
         // Navbar.SetSelected("ChatPageButton");
     }
 
-    private void ToggleSidebar_Click(object? sender, RoutedEventArgs e)
+    private void ToggleSidebar()
     {
         // Toggle sidebar first
         SidebarSplitView.IsPaneOpen = !SidebarSplitView.IsPaneOpen;
@@ -38,13 +39,21 @@ public partial class ChatPage : UserControl, IPage
         // Update button visibility based on new state
         if (SidebarSplitView.IsPaneOpen)
         {
-            ExpandSidebarButton.IsVisible = false;
-            CollapseSidebarButton.IsVisible = true;
+            Navbar.ExpandButton.IsVisible = false;
         }
         else
         {
-            ExpandSidebarButton.IsVisible = true;
-            CollapseSidebarButton.IsVisible = false;
+            Navbar.ExpandButton.IsVisible = true;
         }
+    }
+
+    private void Navbar_OnNavbarExpanded(object? sender, EventArgs e)
+    {
+        ToggleSidebar();
+    }
+
+    private void CollapseSidebarButton_OnClick(object? sender, RoutedEventArgs e)
+    {
+        ToggleSidebar();
     }
 }
