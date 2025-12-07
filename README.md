@@ -1,5 +1,5 @@
 ﻿<p align="center">
-  <img src="Assets/Icons/Inferyn.png" alt="Icon" WIDTH="256" height="256">
+  <img src="Assets/Icons/inferyn.png" alt="Icon" WIDTH="256" height="256">
 </p>
 
 <p align="center">
