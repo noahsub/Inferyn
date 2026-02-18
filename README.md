@@ -28,5 +28,5 @@ This project is dual-licensed:
   You may use, modify, and distribute this software as long as your project is also open source under GPLv3.
 
 - 💼 **Commercial License:**  
-  For closed-source or commercial use, you must purchase a commercial license.
+  For closed-source or commercial use, you must reach out to inferyn.contact@proton.me
 
